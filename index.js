@@ -14,8 +14,6 @@ try {
   };
 }
 
-var recent = [];
-
 http.createServer(function(req, res) {
   var urlPath = url.parse(req.url).pathname;
   var searchString = urlPath.match(/^\/api\/imagesearch\/(.+)$/);
