@@ -25,7 +25,7 @@ http.createServer(function(req, res) {
     updateRecent(query);
 
     request(query, function(err, data) {
-      if (err) return showJson(err);
+      if (err) return showJson({error: err});
       if (!data || !data.items) return showJson([]);
       
       showJson(data.items.map(function(d) {
