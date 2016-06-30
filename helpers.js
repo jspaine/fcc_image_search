@@ -1,14 +1,13 @@
 let config = {
   API_KEY: process.env.API_KEY || '',
   CSE_ID: process.env.CSE_ID || '',
-  PORT: process.env.PORT || ''
+  PORT: process.env.PORT || '',
+  MONGODB_URI: process.env.MONGODB_URI || ''
 }
 
 try {
   config = require('./config');
-} catch (e) {
-  
-}
+} catch (e) {}
 
 module.exports.conf = conf
 
